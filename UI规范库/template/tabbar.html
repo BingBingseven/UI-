@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>底部菜单</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$('.weui-menu-inner').click(function () {
+				    var $menu = $(this).find('ul'),
+				        height = $menu.find('li').length * 40 + 15 + 'px',
+				        opacity = $menu.css('opacity');
+				    $('.weui-menu-inner ul').css({
+				        'top': '0',
+				        'opacity': '0'
+				    });	
+				    if(opacity == 0) {
+				        $menu.css({
+				            'top': '-' + height,
+				            'opacity': 1
+				        });
+				    }else {
+				        $menu.css({
+				            'top': 0,
+				            'opacity': 0
+				        });
+				    }
+				    $("li").click(function(e){
+						var listName = $(this).parent().prev().html();
+						if($menu.css('top') == '-' + height){
+							if(listName == '特色功能'){
+								$("h2").eq(0).html('功能选择：'+$(this).html());
+							}else if(listName == '小说欣赏'){
+								$("h2").eq(1).html('小说选择：'+$(this).html());
+							}else{
+								$("h2").eq(2).html('游戏选择：'+$(this).html());
+							}
+						}
+					})
+				});
+				
+				$(".weui_navbar_item topFix").click(function(){
+					if($(this).attr('panelID') == 'panel1'){
+						$(".weui-menu").show();
+					}else{
+						$(".weui-menu").hide();
+					}
+				})
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">固定在底部的菜单栏，模仿微信风格</div>
+    	<h2>功能选择：无</h2>
+    	<h2>小说选择：无</h2>
+    	<h2>游戏选择：无</h2>
+    <section class="weui-menu">
+        <div class="weui-menu-inner">
+            <em></em>
+            <span>特色功能</span>
+            <ul>
+                <em></em>
+                <li>查询物流</li>
+                <li>购物商城</li>
+                <li>申请手机号码 </li>
+                <li>办理银行业务</li>
+            </ul>
+        </div>
+        <div class="weui-menu-inner">
+            <em></em>
+            <span>小说欣赏</span>
+            <ul>
+                <em></em>
+                <li>钢铁是怎样炼成的</li>
+                <li>茶花女</li>
+                <li>蓝鲸</li><li>傲慢与偏见</li><li>水城</li><li>默</li><li>三个火枪手</li>
+            </ul>
+        </div>
+        <div class="weui-menu-inner">
+            <em></em>
+            <span>趣味游戏</span>
+            <ul>
+                <em></em>
+                <li>打砖块</li>
+                <li>弹一弹</li>
+                <li>纸片飞机</li>
+            </ul>
+        </div> 
+    </section>
+
+
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>列表</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">带说明的列表项</div>
+        <div class="weui_cells">
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>第一项</p>
+                </div>
+                <div class="weui_cell_ft">第一项说明</div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>第二项</p>
+                </div>
+                <div class="weui_cell_ft">第二项说明</div>
+            </div>
+            <div class="weui_cell addFunc">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>带功能</p>
+                </div>
+                <div class="weui_cell_ft">
+                    <p>-</p><span class="funcNum">1</span><p>+</p>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>
+                    	带说明
+                    	<span>
+	                    	<a href="javascript:;" class="weui_btn weui_btn_mini ui_btn_default">促销</a>
+	                    	组合优惠最高减 $10.00
+	                    </span>
+                    </p>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p><i class="icon icon-109"></i>标题栏_带返回</p>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p><i class="icon icon-109"></i>带返回带功能</p>
+                </div>
+                <div class="weui_cell_ft">设为默认</div>
+            </div>
+		</div>  
+		<div class="weui_cells_title">带图标的列表项</div>
+		<div class="weui_cells"> 
+			<div class="weui_cell">
+	            <div class="weui_cell_hd"><img src="../images/icon_nav_article.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+	            <div class="weui_cell_bd weui_cell_primary">
+	                <p>标题文字</p>
+	            </div>
+	            <div class="weui_cell_ft">说明文字</div>
+	        </div>
+        </div>
+        <div class="weui_cells_title">可跳转的列表项</div>
+        <div class="weui_cells weui_cells_access">
+        	<a class="weui_cell " href="javascript:;">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>Select a new number</p>
+                </div>
+                <div class="weui_cell_ft">17007183753</div>
+            </a>
+            <a class="weui_cell " href="javascript:;">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>可跳转列表项</p>
+                </div>
+                <div class="weui_cell_ft">点击跳转</div>
+            </a>
+        </div>
+        <div class="weui_cells_title">带图标可跳转的列表项</div>
+        <div class="weui_cells weui_cells_access">
+        	<a class="weui_cell" href="javascript:;">
+                <div class="weui_cell_hd"><img src="../images/icon_nav_msg.png" alt="" style="width:20px;margin-right:5px;display:block"></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>带图标可跳转的列表项</p>
+                </div>
+                <div class="weui_cell_ft">说明文字</div>
+            </a>
+        </div>
+	</body>
+</html>

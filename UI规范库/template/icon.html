@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>图标</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		 <style>
+		.icon_lists li{
+		  float:left;
+		  width: 60px;
+		  height:60px;
+		  text-align: center;
+		  list-style-type:none;
+		}
+		.icon_lists .icon{
+		  font-size: 24px;
+		  line-height: 40px;
+		  margin: 5px 0;
+		  color:#18b4ed;
+		}
+		</style>
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			for(var i=1;i<=126;i++){
+			    	$(".icon_lists.clear").append('<li><span class="icon icon-'+i+'"></span>'+i+'</li>');
+			    }
+    			for(var i=1;i<=419;i++){
+    				$("#svgUl").append('<li><svg class="iconsvg" ><use xlink:href="../images/svgImg.svg#'+i+'" ></use></svg>'+i+'</li>')
+    			}
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">大图标</div>
+    	<i class="weui_icon_msg weui_icon_success"></i>
+        <i class="weui_icon_msg weui_icon_info"></i>
+        <i class="weui_icon_msg weui_icon_warn"></i>
+        <i class="weui_icon_msg weui_icon_waiting"></i>
+        <i class="weui_icon_safe weui_icon_safe_success"></i>
+        <i class="weui_icon_safe weui_icon_safe_warn"></i>
+        <div class="weui_cells_title">mini图标</div>
+        <i class="weui_icon_success"></i>
+        <i class="weui_icon_success_circle"></i>
+        <i class="weui_icon_success_no_circle"></i>
+        <i class="weui_icon_info"></i>
+        <i class="weui_icon_waiting"></i>
+        <i class="weui_icon_waiting_circle"></i>
+        <i class="weui_icon_circle"></i>
+        <i class="weui_icon_warn"></i>
+        <i class="weui_icon_download"></i>
+        <i class="weui_icon_info_circle"></i>
+        <i class="weui_icon_cancel"></i>
+        <i class="weui_icon_search"></i>
+        <i class="weui_icon_clear"></i>
+        <div class="weui_cells_title">蓝色为扩展图标,引入icon.css文件，icon icon-88 后接数字即可,黄色为扩展svg图标,引入svgImg.svg文件，images/svgImg.svg#1后面跟数字即可</div>
+        <ul class="icon_lists clear">
+        </ul>
+        <ul id="svgUl" class="icon_lists">
+        </ul>
+    
+	</body>
+</html>

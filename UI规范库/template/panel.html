@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>面板</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$(".cdradio").click(function(){
+					$(this).parent().parent().find('.cdRadioTitle').css('color','#ff7100');
+					$(".cdradio").not(this).parent().parent().find('.cdRadioTitle').css('color','#000000');
+				})
+    		});
+    	</script>
+	</head>
+	<body>
+	<div class="weui_cells_title">图文列表组合</div>
+	<div class="weui_panel weui_panel_access">
+    	<div class="weui_panel_bd">
+            <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg weui_cells_access">
+                <div class="weui_media_hd">
+                    <img class="weui_media_appmsg_thumb" src="../images/icon_nav_panel.png" alt="">
+                </div>
+                <div class="weui_media_bd">
+                    <h4 class="weui_media_title">全球通18个月3折优惠计划</h4>
+                    <p class="weui_media_desc">18个月3折优惠合约</p>
+                </div>
+                <div class=" weui_cell_ft"></div>
+            </a>
+            <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg">
+                <div class="weui_media_hd">
+                    <img class="weui_media_appmsg_thumb" src="../images/icon_nav_panel.png" alt="">
+                </div>
+                <div class="weui_media_bd">
+                    <h4 class="weui_media_title">标题二</h4>
+                    <p class="weui_media_desc">toast是一种轻量的提示，在页面中间显示，并且会在2秒(默认值，可修改)之后自动消失。
+可以用来显示一些不会打断用户操作的提示。</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="weui_cells_title">文字列表组合</div>
+    <div class="weui_panel weui_panel_access">
+        <div class="weui_panel_bd">
+            <div class="weui_media_box weui_media_text">
+                <h4 class="weui_media_title">标题一</h4>
+                <p class="weui_media_desc">toast是一种轻量的提示，在页面中间显示，并且会在2秒(默认值，可修改)之后自动消失。
+可以用来显示一些不会打断用户操作的提示。</p>
+            </div>
+            <div class="weui_media_box weui_media_text">
+                <h4 class="weui_media_title">标题二</h4>
+                <p class="weui_media_desc">toast是一种轻量的提示，在页面中间显示，并且会在2秒(默认值，可修改)之后自动消失。
+可以用来显示一些不会打断用户操作的提示。</p>
+            </div>
+        </div>
+    </div>
+    <div class="weui_cells_title">文章列表附来源</div>
+    <div class="weui_panel">
+        <div class="weui_panel_bd">
+            <div class="weui_media_box weui_media_text">
+                <h4 class="weui_media_title">标题一</h4>
+                <p class="weui_media_desc">toast是一种轻量的提示，在页面中间显示，并且会在2秒(默认值，可修改)之后自动消失。
+可以用来显示一些不会打断用户操作的提示。</p>
+                <ul class="weui_media_info">
+                    <li class="weui_media_info_meta">作者：张三</li>
+                    <li class="weui_media_info_meta">时间 2018-5-31</li>
+                    <li class="weui_media_info_meta weui_media_info_meta_extra">本文的内容是...</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="weui_cells_title">优惠券</div>
+    <div class="weui_panel weui_panel_access">
+    	<div class="weui_panel_bd">
+            <div href="javascript:void(0);" class="weui_media_box weui_media_appmsg addBtn">
+                <div class="weui_media_hd">
+                    <img class="weui_media_appmsg_thumb" src="../images/icon_nav_panel.png" alt="">
+                </div>
+                <div class="panelMsg">
+                    <h4 class="weui_media_title">$10优惠券，仅可用于购买iTalkBB MOBO产品计划</h4>
+                    <p class="weui_media_desc"><span class="panelType">类型：TV</span>  2018.07-2018.09</p>
+                </div>
+                <a href="javascript:;" class="weui_btn weui_btn_mini ui_btn_default">领取</a>
+            </div>
+        </div>
+  	</div>
+  	<div class="weui_cells_title">二级页单选框</div>
+	<div class="weui_panel weui_panel_access">
+    	<div class="weui_panel_bd">
+            <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg ">
+                <div class="weui_media_hd">
+                    <input class="cdradio" type="radio"  id="cdrdone" name="radio" />
+                    <label class="" for="cdrdone"></label>
+                </div>
+                <label class="weui_media_bd" for="cdrdone">
+                    <h5 class="cdRadioTitle">Room Number, Street Name,Street Name, City, State, Zipcode.</h5>
+                    <p class="weui_media_desc">NANCY WU</p>
+                </label>
+            </a>
+            <a href="javascript:void(0);" class="weui_media_box weui_media_appmsg ">
+                <div class="weui_media_hd">
+                    <input class="cdradio" type="radio"  id="cdrdtwo" name="radio"/>
+                    <label class="" for="cdrdtwo"></label>
+                </div>
+                <label class="weui_media_bd" for="cdrdtwo">
+                    <h5 class="cdRadioTitle">Room Number, Street Name, City, State, Zipcode.</h5>
+                    <p class="weui_media_desc">NANCY WU</p>
+                </label>
+            </a>
+        </div>
+    </div>
+	</body>
+</html>

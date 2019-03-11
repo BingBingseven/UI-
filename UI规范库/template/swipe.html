@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>轮播</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/touch.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$('#slide1').swipeSlide({
+					autoSwipe:false,//自动切换默认是
+					speed:3000,//速度默认4000
+					continuousScroll:true,//默认否
+					transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+					lazyLoad:true,//懒加载默认否
+					firstCallback : function(i,sum,me){
+			            me.find('.dot').children().first().addClass('cur');
+			        },
+			        callback : function(i,sum,me){
+			            me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+			        }
+				});
+				$('#slide2').swipeSlide({
+					cardMode:true,//卡片模式
+					autoSwipe:false,//自动切换默认是
+					speed:3000,//速度默认4000
+					continuousScroll:true,//默认否
+					transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+					lazyLoad:true,//懒加载默认否
+					firstCallback : function(i,sum,me){
+			            me.find('.dot').children().first().addClass('cur');
+			        },
+			        callback : function(i,sum,me){
+			            me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+			        }
+				});
+				$('#slide3').swipeSlide({
+					autoSwipe:false,//自动切换默认是
+					speed:3000,//速度默认4000
+					continuousScroll:true,//默认否
+					transitionType:'ease-in'
+				});
+    		});
+    	</script>
+	</head>
+	<body>
+	<div class="weui_tab " style="height:44px;" id="tab1"><!--tab-fixed添加顶部-->
+        <div class="weui_navbar" style="height:44px;">
+            <div class="weui_navbar_item topFix" panelID="panel1">
+            	预览
+            </div>
+            <div class="weui_navbar_item topFix" panelID="panel2">
+              	代码
+            </div>
+        </div>
+    </div>
+    
+    <div class="weui-tab_bd-item" id="panel1">
+    	<h3>需要单独加载swipe.js</h3>
+    	<div class="weui_cells_title">卡片模式</div>
+    	<div class="slide" id="slide2">
+		    <ul>
+		        <li>
+		            <a href="#">
+		                <img src="../images/00.png" data-src="../images/00.png" alt="">
+		            </a>
+		           
+		        </li>
+		        <li>
+		            <a href="#">
+		                <img src="../images/01.png" data-src="../images/01.png" alt="">
+		            </a>
+		            
+		        </li>
+		        <li>
+		            <a href="#">
+		                <img src="../images/02.png" data-src="../images/02.png" alt="">
+		            </a>
+		            
+		        </li>
+		    </ul>
+		</div>
+		<div class="weui_cells_title">仅文字</div>
+		<div class="slide" id="slide3" style="background:#eee;height:40px;line-height:40px;rgba(0, 0, 0, 0.01);vertical-align:middle;margin:0 auto;">
+			<ul>
+				<li>
+					<div  class='txt'>基本世神 兑换《传奇世界H5》畅玩级礼包 消耗30金币</div></li>
+				<li>
+					<div  class='txt'>零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</div>
+				</li>
+				<li>
+					<div  class='txt'>兑换【饿了么】畅享美食红包 消耗20金币</div>
+				</li>
+			</ul>
+		</div>
+		<div class="weui_cells_title">图文结合</div>
+    	<div class="slide" id="slide1" >
+		    <ul>
+		        <li>
+		            <a href="#">
+		                <img src="../images/01.png" data-src="../images/01.png" alt="">
+		            </a>
+		            <div class="slide-desc">零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</div>
+		        </li>
+		        <li>
+		            <a href="#">
+		                <img src="../images/02.png" data-src="../images/02.png" alt="">
+		            </a>
+		            <div class="slide-desc">23333零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</div>
+		        </li>
+		        <li>
+		            <a href="#">
+		                <img src="../images/00.png" data-src="../images/00.png" alt="">
+		            </a>
+		            <div class="slide-desc">33333零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</div>
+		        </li>
+		    </ul>
+		    <div class="dot">
+		        <span></span>
+		        <span></span>
+		        <span></span>
+		    </div>
+		</div>
+    </div>
+
+<div class="weui-tab_bd-item" id="panel2">
+<div id="halfScrean">
+<h3>HTML代码：</h3>
+<xmp>
+<h3>需要单独加载swipe.js</h3>
+<div class="weui_cells_title">仅图片</div>
+<div class="slide" id="slide2">
+    <ul>
+        <li>
+            <a href="#">
+                <img src="../images/00.png" data-src="../images/00.png" alt="">
+            </a>
+           
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/01.png" data-src="../images/01.png" alt="">
+            </a>
+            
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/02.png" data-src="../images/02.png" alt="">
+            </a>
+            
+        </li>
+    </ul>
+    <div class="dot">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<div class="weui_cells_title">仅文字</div>
+<div class="slide" id="slide3" style="background:#eee;height:40px;line-height:40px;rgba(0, 0, 0, 0.01);vertical-align:middle;margin:0 auto;">
+	<ul>
+		<li>
+			<div  class='txt'>基本世神 兑换《传奇世界H5》畅玩级礼包 消耗30金币</div></li>
+		<li>
+			<div  class='txt'>零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</div>
+		</li>
+		<li>
+			<div  class='txt'>兑换【饿了么】畅享美食红包 消耗20金币</div>
+		</li>
+	</ul>
+</div>
+<div class="weui_cells_title">图文结合</div>
+<div class="slide" id="slide1" >
+    <ul>
+        <li>
+            <a href="#">
+                <img src="../images/01.png" data-src="../images/01.png" alt="">
+            </a>
+            <div class="slide-desc">零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</div>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/02.png" data-src="../images/02.png" alt="">
+            </a>
+            <div class="slide-desc">23333零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</div>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../images/00.png" data-src="../images/00.png" alt="">
+            </a>
+            <div class="slide-desc">33333零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</div>
+        </li>
+    </ul>
+    <div class="dot">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+</xmp>
+</div>
+<div id="halfScrean">
+<h3>JS代码：</h3>
+<xmp>
+$('#slide1').swipeSlide({
+	autoSwipe:true,//自动切换默认是
+	speed:3000,//速度默认4000
+	continuousScroll:true,//默认否
+	transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+	lazyLoad:true,//懒加载默认否
+	firstCallback : function(i,sum,me){
+        me.find('.dot').children().first().addClass('cur');
+    },
+    callback : function(i,sum,me){
+        me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+    }
+});
+$('#slide2').swipeSlide({
+	autoSwipe:true,//自动切换默认是
+	speed:3000,//速度默认4000
+	continuousScroll:true,//默认否
+	transitionType:'cubic-bezier(0.22, 0.69, 0.72, 0.88)',//过渡动画linear/ease/ease-in/ease-out/ease-in-out/cubic-bezier
+	lazyLoad:true,//懒加载默认否
+	firstCallback : function(i,sum,me){
+        me.find('.dot').children().first().addClass('cur');
+    },
+    callback : function(i,sum,me){
+        me.find('.dot').children().eq(i).addClass('cur').siblings().removeClass('cur');
+    }
+});
+$('#slide3').swipeSlide({
+	autoSwipe:true,//自动切换默认是
+	speed:3000,//速度默认4000
+	continuousScroll:true,//默认否
+	transitionType:'ease-in'
+});
+</xmp>
+</div>
+
+</div>
+	</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>手风琴菜单</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$('.js-category').click(function(){
+					$parent = $(this).parent('li');
+				    if($parent.hasClass('js-show')){
+                        $parent.removeClass('js-show');
+                        $(this).children('i').removeClass('icon-35').addClass('icon-74');
+                    }else{
+                        $parent.siblings().removeClass('js-show');
+                        $parent.addClass('js-show');
+                        $(this).children('i').removeClass('icon-74').addClass('icon-35');
+                    }
+				});
+				
+				$(".weui-flex-item .weui_btn").click(function(e){
+					//点击卡片里的按钮不会触发下拉事件
+					e.stopPropagation();
+				})
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">手风琴菜单，一般用在首页</div>
+    	<div class="page-bd">
+	    	<ul>
+	    		<li class="">
+	                <div class="weui-flex js-category">
+	                    <p class="weui-flex-item">功能列表</p>
+	                    <i class="icon icon-74"></i>
+	                </div>
+	                <div class="page-category js-categoryInner">
+	                    <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+				            <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <p>基础功能</p>
+				                </div>
+				                <div class="weui_cell_ft"></div>
+				            </a>   
+				             <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <p>扩展功能</p>
+				                </div>
+				                <div class="weui_cell_ft"></div>
+				            </a> 
+				                         <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <p>特色功能</p>
+				                </div>
+				                <div class="weui_cell_ft"></div>
+				            </a>
+				                     <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <p>开发功能</p>
+				                </div>
+				                <div class="weui_cell_ft"></div>
+				            </a>    
+				        </div>  
+	                </div>
+	            </li>
+	            <li class="">
+	                <div class="weui-flex js-category">
+	                    <p class="weui-flex-item">Expense Details</p>
+						$36.89
+	                    <i class="icon icon-74"></i>
+	                </div>
+	                <div class="page-category js-categoryInner">
+	                    <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+				            <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <p>Activation Fee</p>
+				                </div>
+								$50.00
+				            </a>   
+				             <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <p>Service Fee</p>
+				                </div>
+				                $9.99
+				            </a> 
+				                         <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <p>Card Fee（One-Time）</p>
+				                </div>
+				                $12.00
+				            </a>  
+				        </div>  
+	                </div>
+	            </li>
+	            <li class="">
+	                <div class="weui-flex js-category">
+	                    <p class="weui-flex-item">Promotion code</p>
+	                    218974981YTHJG
+	                    <i class="icon icon-74"></i>
+	                </div>
+	                <div class="page-category js-categoryInner">
+	                    <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+				            <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <input class="cdInput" />
+				                </div>
+				                <i class="icon icon-66"></i>
+				            </a>    
+				        </div>  
+	                </div>
+	            </li>
+	            <li class="">
+	                <div class="weui-flex js-category">
+	                    <p class="weui-flex-item"><i class="icon icon-70 f"></i>iTalkBB TV</p>
+	                    <i class="icon icon-74"></i>
+	                </div>
+	                <div class="page-category js-categoryInner">
+	                    <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+				            <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <span class="f13">组合优惠最高减 $15.00</span>
+				                </div>
+				            </a>   
+				            <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <i class="icon icon-70 f"></i>
+				                    <img src="../images/icon_nav_panel.png" />
+				                    <span class="f20">全球通包月计划</span>
+				                </div>
+				            </a>
+				        </div>  
+	                </div>
+	            </li>
+	            <li class="">
+	                <div class="weui-flex js-category">
+	                    <div class="weui-flex-item">
+	                    	<img src="../images/icon_nav_panel.png" />
+	                    	<p class="title">全球通包月计划全球通全球通包月计划全球通全球通包月计划全球通全球通包月计划全球通全球通包月计划全球通</p>
+	                    	<a href="javascript:;" class="weui_btn weui_btn_mini ui_btn_default">购买</a>
+	                    </div>
+	                </div>
+	                <div class="page-category js-categoryInner garyBack">
+	                    <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+				            <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <span class="f13">组合优惠最高减 $15.00组合优惠最高减 $15.00组合优惠最高减 $15.00组合优惠最高减 $15.00组合优惠最高减 $15.00组合优惠最高减 $15.00</span>
+				                </div>
+				            </a>   
+				        </div>  
+	                </div>
+	            </li>
+	            <li class="cardMenu">
+	                <div class="weui-flex js-category">
+	                    <p class="weui-flex-item"><i class="icon icon-70 f"></i>iTalkBB TV</p>
+	                    <i class="icon icon-74"></i>
+	                </div>
+	                <div class="page-category js-categoryInner">
+	                    <div class="weui_cells weui_cells_access" style="margin-top: 0px;">
+				            <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <span class="f13">组合优惠最高减 $15.00</span>
+				                </div>
+				            </a>   
+				            <a class="weui_cell" href="javascript:;">
+				                <div class="weui_cell_bd weui_cell_primary">
+				                    <i class="icon icon-70 f"></i>
+				                    <img src="../images/icon_nav_panel.png" />
+				                    <span class="f20">全球通包月计划</span>
+				                </div>
+				            </a>
+				        </div>  
+	                </div>
+	            </li>
+	    	</ul>
+    	</div>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>单选框</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$(".weui_check").click(function(){
+    				$("h2").html("选中了："+$(this).parent().prev().find('p').html());
+    			});
+    		});
+    	</script>
+	</head>
+	<body>
+		<div class="weui_cells_title">喜欢的主食</div>
+	    <div class="weui_cells weui_cells_radio">
+	        <label class="weui_cell weui_check_label" for="x11">
+	            <div class="weui_cell_bd weui_cell_primary">
+	                <p>馒头</p>
+	            </div>
+	            <div class="weui_cell_ft">
+	                <input type="radio" class="weui_check" name="radio1" id="x11">
+	                <span class="weui_icon_checked"></span>
+	            </div>
+	        </label>
+	        <label class="weui_cell weui_check_label" for="x12">
+	            <div class="weui_cell_bd weui_cell_primary">
+	                <p>米饭</p>
+	            </div>
+	            <div class="weui_cell_ft">
+	                <input type="radio" name="radio1" class="weui_check" id="x12" checked="checked">
+	                <span class="weui_icon_checked"></span>
+	            </div>
+	        </label>
+	        <label class="weui_cell weui_check_label" for="x13">	
+	            <div class="weui_cell_bd weui_cell_primary">
+	                <p>面条</p>
+	            </div>
+	            <div class="weui_cell_ft">
+	                <input type="radio" name="radio1" class="weui_check" id="x13">
+	                <span class="weui_icon_checked"></span>
+	            </div>
+	        </label>
+	    </div>
+	    <h2>选中了：米饭</h2>
+	</body>
+</html>

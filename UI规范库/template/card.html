@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>卡片</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/touchslider.js"></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){    	
+    			var t11=new TouchSlider('slider1',{duration:800, interval:3000, direction:0, autoplay:false, align:'left', mousewheel:false, mouse:true, fullsize:false,mouseTouch:true});
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">横向滚动卡片</div>
+    	<div class='swipe card'>
+		  <ul id='slider1'>
+		    <li><div class="cardContent">
+		    	<p class="cardTitle">LUCY<span class="right">默认地址</span></p>
+		    	<p class="cardTitle">美国华盛顿第五大道243号美国华盛顿第五大道243号</p>
+		    	<p class="cardFoot">010-1294385876</p>
+		    </div></li>
+		    <li><div class="cardContent">
+		    	<p class="cardTitle">MIKE</p>
+		    	<p class="cardTitle">美国华盛顿第五大道243号</p>
+		    	<p class="cardFoot">010-1294385876</p>
+		    </div></li>
+		    <li><div class="cardContent">
+		    	<p class="cardTitle">JHON</p>
+		    	<p class="cardTitle">美国华盛顿第五大道243号</p>
+		    	<p class="cardFoot">010-1294385876</p>
+		    </div></li>
+		    <li><div class="cardContent">
+		    	<i class="icon icon-36"></i>
+		    </div></li>
+		  </ul>
+		</div>
+    	<div class="weui_cells_title">信息流卡片布局</div>
+    	<div class="cardList">
+    		<div class="cardImg"><img class="cardTopimg" src="../images/02.png" /></div>
+    		<div class="cardTxt">
+    			<h4>图文卡片1</h4>
+    			<p>卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行</p>
+    		</div>
+    	</div>
+    	<div class="cardList">
+    		<div class="cardImg"><img class="cardTopimg" src="../images/01.png" /></div>
+    		<div class="cardTxt">
+    			<h4>图文卡片2</h4>
+    			<p>卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行</p>
+    		</div>
+    	</div>
+    	<div class="cardList">
+    		<div class="cardInnerTest">
+    			<p>卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行</p>
+    		</div>
+    		<img  class="cardInnerImg" src="../images/00.png"/>
+    	</div>
+    	<div class="cardList">
+    		<div class="cardInnerTest">
+    			<p>卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行卡片内容最多2行</p>
+    		</div>
+    		<img  class="cardInnerImg" src="../images/vcode.jpg"/>
+    	</div>
+    	<div class="weui_cells_title">整屏卡片控件</div>
+    	<div class="planCon" >
+			<div class="conImg">
+				<p class="conICon">$<span>14.99</span></p>
+				<p class="conICon mon">/Mon</p>
+			</div>
+			<div class="conMsg">
+				<p class="conMTi">全球通18个月3折优惠计划</p>
+				<div>
+					<p class="conMToast">永久中国手机号码</p>
+					<p class="conMToast">长途通话至全球29个国家或地区</p>
+					<p class="conMToast">中国来电转移至加拿大手机号码</p>
+					<p class="conMToast">无限接收和回复中国短信</p>
+				</div>
+				<ul class="comMXq" >
+					<li>无限流量 5G@4G LTE</li>
+					<li>无限通话</li>
+					<li>无限短信</li>
+					<li>每条线每月5GB高速流量，高速流量用完后降速。7月31日前，可享受以下优惠 (优惠码已带入):</li>
+					<li>免激活费$25/线</li>
+					<li>免中国卡卡费$10/线</li>
+				</ul>
+			</div>
+			<div class="comMClick">立即购买</div>
+		</div>
+	</body>
+</html>

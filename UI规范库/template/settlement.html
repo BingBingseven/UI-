@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>底部结算菜单</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">结算</div>
+    	<div class="btmSettle weui_cells_checkbox">
+    		<label class="weui_cell weui_check_label settleCheck" for="s12">
+                <div class="weui_cell_hd">
+                    <input type="checkbox" class="weui_check" name="checkbox1" id="s12" >
+                    <i class="weui_icon_checked"></i>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>全选</p>
+                </div>
+            </label>
+    		<div class="rightSettle">
+    			<div class="settlefoot">
+    				合计：<span class="settleMoney"><span class="miniB">$</span>2.99</span>
+    			</div>
+    			<div class="settleBtn">结算</div>
+    		</div>
+    	</div>
+    	<div class="weui_cells_title">删除</div>
+    	<div class="btmSettle weui_cells_checkbox">
+    		<label class="weui_cell weui_check_label settleCheck" for="s11">
+                <div class="weui_cell_hd">
+                    <input type="checkbox" class="weui_check" name="checkbox1" id="s11" >
+                    <i class="weui_icon_checked"></i>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>全选</p>
+                </div>
+            </label>
+    		<div class="rightSettle">
+    			<div class="settlefoot">
+    				回收站
+    			</div>
+    			<div class="settleBtn del">删除</div>
+    		</div>
+    	</div>
+    	<div class="weui_cells_title">付款</div>
+    	<div class="btmSettle weui_cells_checkbox">
+    		<div></div>
+    		<div class="rightSettle">
+    			<div class="settlefoot">
+	    			合计：<span class="settleMoney"><span class="miniB">$</span>36.00</span>
+    			</div>
+    			<div class="settleBtn del">立即付款</div>
+    		</div>
+    	</div>
+    	<div class="weui_cells_title">文字加按钮</div>
+    	<div class="btmSettle weui_cells_checkbox addFrame">
+    		<div></div>
+    		<div class="rightSettle ArcDel">
+    			<div class="settlefoot">
+	    			Total：<span class="settleMoney"><span class="miniB">$</span>36.00</span>
+    			</div>
+    			<div class="settleBtn ">pay now</div>
+    		</div>
+    	</div>
+    	<div class="weui_cells_title">文字加按钮(禁用状态)</div>
+    	<div class="btmSettle weui_cells_checkbox addFrame">
+    		<div></div>
+    		<div class="rightSettle ArcDel">
+    			<div class="settlefoot">
+	    			Total：<span class="settleMoney"></span>
+    			</div>
+    			<div class="settleBtn  bggray"  disabled="true">pay now</div>
+    		</div>
+    	</div>
+    
+	</body>
+</html>

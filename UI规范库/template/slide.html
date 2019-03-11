@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>滑块</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){	
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="page-bd">
+	    	<h5>固定值</h5>
+	        <div class="weui-slider">
+	            <div class="weui-slider-inner">
+	                <div style="width: 10%;" class="weui-slider-track"></div>
+	                <div style="left: 10%;" class="weui-slider-handler"></div>
+	            </div>
+	        </div>
+	        <br>
+	        <h5>可滑动,同时兼容pc端+手机端</h5>
+	        <div class="weui-slider-box">
+	            <div class="weui-slider">
+	                <div id="sliderInner" class="weui-slider-inner">
+	                    <div id="sliderTrack" style="width: 50%;" class="weui-slider-track"></div>
+	                    <div id="sliderHandler" style="left: 50%;" class="weui-slider-handler"></div>
+	                </div>
+	            </div>
+	            <div id="sliderValue" class="weui-slider-box-value">50</div>
+	        </div>  
+    	</div>
+   
+	</body>
+</html>

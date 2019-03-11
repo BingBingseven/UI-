@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>悬浮按钮</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){    	
+    			//这行代码只是为了撑开容器高度，无实际意义。
+				$("#panel1").height($(window).height() - 60 + 'px');
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">悬浮按钮，类似回到顶部。</div>
+    	<div class="floatTop"><span class="icon icon-7"></span></div>
+    	<div class="floatTop leftTop"><span class="icon icon-10"></span></div>
+    	<div class="floatTop rightTop"><span class="icon icon-14"></span></div>
+    	<div class="floatTop leftBottom"><span class="icon icon-3"></span></div>
+    
+	</body>
+</html>

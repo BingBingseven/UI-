@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>徽章</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			var ani = $("#ani");
+				$('.weui_btn').click(function(){	
+					ani.removeClass();
+		 			ani.addClass($(this).data('ani')+"  animated");
+				});
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title weui-reddot">默认红点</div>
+    	<div class="weui_cells_title weui-reddot-s">小红点</div>
+    	<div class="weui_cells_title">带文字<sup><span class="weui-badge">new</span></sup></div>
+    	<div class="weui_cells_title">带文字<sup><span class="weui-badge">1</span></sup></div>
+    	<div class="weui_cells_title">带文字<sup><span class="weui-badge">99+</span></sup></div>
+    	<div class="weui_cells_title">基础动画效果</div>
+    	<div><img id="ani" src="../images/b.jpg" /></div>
+    	<button data-ani="swing" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">swing</button>
+		<button data-ani="shake" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">shake</button>
+		<button data-ani="xz360" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">xz360</button>
+		<button data-ani="xz360 reverse" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">反向reverse</button>
+		<button data-ani="fadeIn" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">淡入用于显示fadeIn</button>
+		<button data-ani="fadeOut" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">淡出 用于隐藏fadeOut</button>
+		<button data-ani="pulse" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">pulse</button>
+		<button data-ani="rotateIn" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">rotateIn</button>
+		<button data-ani="slideIn" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">slideIn</button>
+		<button data-ani="slideOut" class="weui_btn  weui_btn_mini weui_btn_primary   f-white">slideOut</button>
+    
+	</body>
+</html>

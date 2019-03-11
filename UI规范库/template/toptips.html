@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>顶部提示</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){   	 
+			    $("#sd1").click(function(){
+			    	$.toptips('<i class="icon icon-66"></i>加载信息流','msgLoad');
+			    })
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">一系列操作提示</div>
+    	<div class="page-bd-15">
+	        <a href="javascript:;" class="weui_btn weui_btn_primary" onclick="$.toptips('缺少服务未全部补充完整','failed')">toptips默认</a>
+		    <a href="javascript:;" class="weui_btn weui_btn_primary" onclick="$.toptips('success','ok')">toptips ok或success</a>
+		    <a href="javascript:;" class="weui_btn weui_btn_primary"  onclick="$.toptips('黑色提示','info')">toptips info</a>
+		    <a href="javascript:;" class="weui_btn weui_btn_primary"  onclick="$.toptips('warning','warning')">toptips warning</a>
+		    <a href="javascript:;" class="weui_btn weui_btn_primary"  id="sd1">加载信息流</a>
+	    </div>
+    
+	</body>
+</html>

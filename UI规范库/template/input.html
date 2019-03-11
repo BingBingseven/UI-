@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>输入框</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$("#textarea").on("input propertychange",function(){
+    				var textLength = $(this).val().length;
+    				if(textLength <= $("#count_max").html()){
+    					$("#count").html(textLength);
+    				}
+    			});
+    			
+    			var textForm = $("#form");
+				textForm.form();
+				$("#formSubmitBtn").click(function(){
+				    textForm.validate(function(error){
+				        if(error){ 
+				        	console.log($(this));
+				        	console.log(error);
+				        }else{
+				            $.toptips('验证通过提交','ok');
+				        }
+				    }); 
+				});
+				
+				//以下代码只针对页面上的简单验证
+				$("#submitForm").click(function(){
+					$(".inputMust").each(function(a,b){
+						var thisInput = $('.inputMust .weui_input').eq(a);
+						var thisInputMust = $(".inputMust").eq(a).find('.ui_inputTitle');
+						if(thisInput.val() == ''){
+							//填写为空
+							thisInput.addClass('inputEmpty');
+							thisInputMust.addClass('titleError');
+							thisInput.attr('placeholder','请填写此项');
+						}else if(thisInput.attr('pattern')){
+							eval("var thispattern = /" + thisInput.attr('pattern') + "/;"); 
+							if(thispattern.test(thisInput.val())){
+								//验证通过
+								thisInputMust.removeClass('titleError');
+								$(".inputMust").eq(a).find('.errorMsg').hide();
+							}else{
+								//格式不对
+								$(".inputMust").eq(a).find('.errorMsg').show();
+							}
+						}else{
+							//验证通过
+							thisInputMust.removeClass('titleError');
+						}
+					})
+				})
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">输入框</div>
+    	<div class="weui_cells weui_cells_form">
+    		<div class="weui_cell">
+                <div class="weui_cell_hd"><label class="weui_label">姓名</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="text" placeholder="请输入姓名"/>
+                </div>
+            </div>
+            <div class="weui_cell weui_vcode">
+	            <div class="weui_cell_hd"><label class="weui_label">验证码</label></div>
+	            <div class="weui_cell_bd weui_cell_primary">
+	                <input class="weui_input" type="number" placeholder="请输入验证码"/>
+	            </div>
+	            <div class="weui_cell_ft">
+	                <a href="javascript:;" class="weui-vcode-btn">获取验证码</a>
+	            </div>
+	        </div>
+	        <div class="weui_cell weui_cell_warn">
+                <div class="weui_cell_hd"><label for="" class="weui_label">卡号</label></div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" value="weui input error" placeholder="请输入卡号"/>
+                </div>
+                <div class="weui_cell_ft">
+                    <i class="weui_icon_warn"></i>
+                </div>
+          </div> 
+    	</div> 
+    	<div class="weui_cells_title">无标题文本框</div>
+		 <div class="weui_cells">
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" placeholder="请输入文本" type="text">
+                </div>
+            </div>
+        </div>  
+        <div class="weui_cells_title">文本域</div>     
+		<div class="weui_cells weui_cells_form">
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <textarea id="textarea" class="weui_textarea" placeholder="请输入文本" rows="3" maxlength="20"></textarea>
+                    <div class="weui_textarea_counter"><span id='count'>0</span>/<span id='count_max'>20</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="weui_cells_title">复合选择输入框</div>
+ 		<div class="weui_cells">
+            <div class="weui_cell weui_cell_select weui_select_before">
+                <div class="weui_cell_hd">
+                    <select class="weui_select" name="select2">
+                        <option value="1">+86</option>
+                        <option value="2">+80</option>
+                        <option value="3">+84</option>
+                        <option value="4">+87</option>
+                    </select>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input" type="number" pattern="[0-9]*" placeholder="请输入号码"/>
+                </div>
+            </div>
+        </div>
+        <div class="weui_cells_title">选择</div>
+		<div class="weui_cells">
+            <div class="weui_cell weui_cell_select">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select1">
+                        <option selected="" value="1">微信号</option>
+                        <option value="2">QQ号</option>
+                        <option value="3">Email</option>
+                    </select>
+                </div>
+            </div>
+            <div class="weui_cell weui_cell_select weui_select_after">
+                <div class="weui_cell_hd">
+                    <label for="" class="weui_label">国家/地区</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <select class="weui_select" name="select2">
+                        <option value="1">中国</option>
+                        <option value="2">美国</option>
+                        <option value="3">英国</option>
+                    </select>
+                </div>
+            </div>
+        </div>   
+        <div class="weui_cells_title">带验证规则的输入框，点击提交后验证</div>
+        <form id="form">
+		    <div class="weui_cells weui_cells_form">
+		        <div class="weui_cell">
+		            <div class="weui_cell_hd"><label class="weui_label">手机号</label></div>
+		            <div class="weui_cell_bd weui_cell_primary">
+		                <input class="weui_input" type="tel" required pattern="[0-9]{11}" maxlength="11"  >
+		            </div>
+		            <div class="weui_cell_ft">
+		                <i class="weui_icon_warn"></i>
+		            </div>
+		        </div>
+		        <div class="weui_cell weui_vcode">
+		            <div class="weui_cell_hd"><label class="weui_label">验证码</label></div>
+		            <div class="weui_cell_bd weui_cell_primary">
+		                <input class="weui_input" type="number" required 
+		                       placeholder="点击验证码更换" tips="请输入验证码">
+		            </div>
+		            <div class="weui_cell_ft">
+		                <i class="weui_icon_warn"></i>
+		                <a href="javascript:;" class="weui-vcode-btn">获取验证码</a>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="weui_btn_area">
+		        <a id="formSubmitBtn" href="javascript:" class="weui_btn weui_btn_primary">提交</a>
+		    </div>
+		</form>
+		<div class="weui_cells_title">标题输入框各占一行</div>
+		<div class="weui_cells ui_input">
+			<div class="inputMust">
+				<p class="ui_inputTitle">First Name*</p>
+	            <div class="weui_cell">
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <input class="weui_input" placeholder="请输入文本" type="text">
+	                </div>
+	            </div>
+	            <p class='errorMsg'>此项格式错误</p>
+			</div>
+            <div class="inputMust">
+				<p class="ui_inputTitle">Phone*</p>
+	            <div class="weui_cell">
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <input class="weui_input" pattern="[0-9]{11}" placeholder="请输入文本" type="text">
+	                </div>
+	            </div>
+	            <p class='errorMsg'>此项格式错误</p>
+			</div>
+			<div class="inputDefault">
+				<p class="ui_inputTitle">Adress</p>
+	            <div class="weui_cell">
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <input class="weui_input" placeholder="请输入文本" type="text">
+	                </div>
+	            </div>
+			</div>
+			<div class="inputDefault">
+				<p class="ui_inputTitle">select</p>
+	            <div class="weui_cell weui_cell_select">
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <select class="weui_select" name="select1">
+	                        <option selected="" value="1">微信号</option>
+	                        <option value="2">QQ号</option>
+	                        <option value="3">Email</option>
+	                    </select>
+	                </div>
+	            </div>
+			</div>
+			<div class="inputDisable">
+				<p class="ui_inputTitle">Age</p>
+	            <div class="weui_cell inputDisable">
+	                <div class="weui_cell_bd weui_cell_primary">
+	                    <input class="weui_input"  type="text" disabled="disabled">
+	                </div>
+	            </div>
+			</div>
+            <a href="javascript:;" class="ui_btn ui_btn_warn f15" id="submitForm">确认</a>
+      </div> 
+	</body>
+</html>

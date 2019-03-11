@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>轮播</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/touchslider.js"></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){    	
+    			var t1=new TouchSlider('slider',{duration:800, interval:3000, direction:0, autoplay:true, align:'center', mousewheel:false, mouse:true, fullsize:false});
+				var t11=new TouchSlider('slider1',{duration:800, interval:3000, direction:0, autoplay:true, align:'left', mousewheel:false, mouse:true, fullsize:false});
+				var t2=new TouchSlider('slider2',{duration:600, interval:3000, direction:1, autoplay:true, align:'middle', mousewheel:true, mouse:true, fullsize:true});
+				var t3=new TouchSlider('slider3',{duration:1000, direction:0, interval:3000, fullsize:true,autoplay:false,start:1});
+    		});
+    	</script>
+	</head>
+	<body>
+    	<h3>需要单独加载touchslider.js</h3>
+    	<div class="weui_cells_title">full-width 类型：容器宽度自适应，幻灯宽度不固定，居中对齐</div>
+    	<div class='swipe' >
+		  <ul id='slider'>
+		    <li style='display:block'><div>1</div></li>
+		    <li><div>2</div></li>
+		    <li><div>3</div></li>
+		    <li><div>4</div></li>
+		    <li><div>5</div></li>
+		  </ul>
+		</div>
+		<div class="weui_cells_title">full-width 类型：容器宽度自适应，幻灯宽度不固定，靠左对齐</div>
+    	<div class='swipe'>
+		  <ul id='slider1'>
+		    <li style='display:block'><div>1</div></li>
+		    <li><div>2</div></li>
+		    <li><div>3</div></li>
+		    <li><div>4</div></li>
+		    <li><div>5</div></li>
+		  </ul>
+		</div>
+  	    <div class="weui_cells_title">250px-width 类型：容器宽度250px，固定宽度幻灯，方向向上滚动</div>
+  	    <div class='swipe' style='height:143px;width:250px'>
+		  <ul id='slider2'>
+		    <li class="a" style='display:block'><div>1</div></li>
+		    <li class="a" style='display:none'><div>2</div></li>
+		    <li class="a" style='display:none'><div>3</div></li>
+		    <li class="a" style='display:none'><div>4</div></li>
+		    <li class="a" style='display:none'><div>5</div></li>
+		  </ul>
+		</div>
+		<div class="weui_cells_title">Full-width 类型：容器宽度自适应，幻灯宽度固定</div>
+		<div class='swipe' style="height:123px;">
+		  <ul id='slider3'>
+		    <li style='display:block'><div>1</div></li>
+		    <li style='display:none;width:200px;'><div>2</div></li>
+		    <li style='display:none;width:300px;'><div>3</div></li>
+		    <li style='display:none;width:100px;'><div>4</div></li>
+		    <li style='display:none;width:500px;'><div>5</div></li>
+		  </ul>
+		</div>
+   
+	</body>
+</html>

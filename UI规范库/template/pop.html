@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>底部弹出页</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			//这行代码只是为了撑开容器高度，无实际意义,使用时popContent放在body下。
+				$("#panel1").height($(window).height() - 44 + 'px');
+				
+				//控制弹框弹出的js
+				$("#pop").click(function(){
+					$(".popContent").show();
+				})
+				$(".popBg,.hidePop").click(function(){
+					$(".popContent").hide();
+				})
+    		});
+    	</script>
+	</head>
+	<body>
+    
+        底部弹出详情框，背景有遮罩层
+    <div class="page-bd-15">
+    	<a href="javascript:;" class="ui_btn ui_btn_default f15" id="pop">列表</a>
+    </div>
+    <div class="popContent">
+    	<div class="popBg">
+    		<i class="icon icon-95 rightBtn"></i>
+    	</div>
+    	<div class="popKu">
+    		<div class="ui_notice green">温馨提示：以下内容为服务费选项</div>
+    		<h4>计划</h4>
+    		<div class="ui_notice blue inline">全球包月计划</div>
+    		<h4>合约</h4>
+    		<div class="ui_notice blue inline">12个月</div>
+    		<div class="weui_cell addFunc">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <p>购买数量</p>
+                </div>
+                <div class="weui_cell_ft">
+                    <p>-</p><span class="funcNum">1</span><p>+</p>
+                </div>
+            </div>
+            <a href="javascript:;" class="ui_btn ui_btn_blue f15 hidePop">确认</a>
+    	</div>
+    </div>
+
+	</body>
+</html>

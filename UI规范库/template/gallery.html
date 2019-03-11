@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>字体</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<style>
+			.uiImg{
+				margin-left: 10px;
+				max-width: 60%;
+			}
+		</style>
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$('.weui-gallery').click(function(){
+    				$(this).fadeOut();
+    			});
+    			$(".imgPick").click(function(){
+    				$("input[type='file']").trigger('click');
+    			});
+    			$("#fileChoose").change(function(){
+    				var file = $('#fileChoose').get(0).files[0];
+    				var reader = new FileReader();
+    				reader.readAsDataURL(file);
+    				reader.onload=function(e){
+				    	var html = '<img class="uiImg" src='+ e.target.result +'>';
+				    	$(".imglist").append(html);
+				    	$("img").click(function(){
+		    				$('.weui-gallery').fadeIn();
+		    				$('.weui-gallery-img').css('background-image','url('+$(this).attr('src')+')');
+		    			});
+				    }
+    			})
+    		});
+    	</script>
+	</head>
+	<body>
+	<div class="weui_cells_title">选取图片+点击图片预览</div>
+	<div class="imglist"></div>
+	<input type="file" class="hide" id="fileChoose"/>
+	<div class="imgPick">+</div>
+	
+    <div class="weui-gallery" style="display: none">
+		<span class="weui-gallery-img" ></span>
+		<div class="weui-gallery-opr">
+	        <a href="javascript:" class="weui-gallery-del" >
+	            <i class="icon icon-26 f-gray"></i>
+	        </a>
+	    </div>
+	</div>
+	</body>
+</html>

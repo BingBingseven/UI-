@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>基础交互</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			
+    		});
+    	</script>
+	</head>
+	<body>
+	<div class="weui_tab " style="height:44px;" id="tab1"><!--tab-fixed添加顶部-->
+        <div class="weui_navbar" style="height:44px;">
+            <div class="weui_navbar_item topFix" panelID="panel1">
+            	预览
+            </div>
+            <div class="weui_navbar_item topFix" panelID="panel2">
+              	代码
+            </div>
+        </div>
+    </div>
+    
+    <div class="weui-tab_bd-item" id="panel1">
+    	<div>
+    		<div class="weui_cells_title">非文字交互效果</div>
+    		<div class="f-12 usabledEle">Type something</div>
+    	</div>
+    </div>
+
+<div class="weui-tab_bd-item" id="panel2">
+<div id="halfScrean">
+<h3>HTML代码：</h3>
+<xmp>
+		
+    	<div>
+    		<div class="weui_cells_title">非文字交互效果</div>
+    		<div class="f-12 usabledEle">Type something</div>
+    	</div>
+</xmp>
+</div>
+<div id="halfScrean">
+<h3>JS代码：</h3>
+<xmp>
+				
+</xmp>
+</div>
+
+</div>
+	</body>
+</html>

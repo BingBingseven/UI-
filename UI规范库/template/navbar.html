@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>字体</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+			    $('#tab2').tab({defaultIndex:0,activeClass:"tab-red"});
+			    $('#tab3').tab({defaultIndex:0,activeClass:"tab-blue"});
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells_title">导航栏，可以自定义颜色</div>
+    	<div class="weui_tab " style="height:44px;" id="tab2"><!--tab-fixed添加顶部-->
+	        <div class="weui_navbar" style="height:44px;">
+	            <div class="weui_navbar_item tab-red" panelID="panel3">
+	            	导航栏一
+	            </div>
+	            <div class="weui_navbar_item" panelID="panel4">
+	              	导航栏二
+	            </div>
+	        </div>
+	    </div>
+    	<div class="weui_cells_title">次级导航栏</div>
+    	<div class="weui_tab " style="height:44px;" id="tab3"><!--tab-fixed添加顶部-->
+	        <div class="weui_navbar" style="height:44px;">
+	            <div class="weui_navbar_item second tab-blue" panelID="panel3">
+	            	<div class="navInner">导航栏一</div>
+	            </div>
+	            <div class="weui_navbar_item second" panelID="panel4">
+	              	<div class="navInner">导航栏二</div>
+	            </div>
+	            <div class="weui_navbar_item second" panelID="panel5">
+	              	<div class="navInner">导航栏三</div>
+	            </div>
+	        </div>
+	    </div>
+    
+	</body>
+</html>

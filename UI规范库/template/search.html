@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>搜索框</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$('.searchbar_wrap').searchBar({
+				    cancelText:"取消",
+				    searchText:'请输入搜索内容',
+				    onfocus: function (value) {
+				    },
+				    onblur:function(value) {
+				    },
+				    oninput: function(value) {
+				    },
+				    onsubmit:function(value){
+				    	$("h4").html("搜索内容："+value);
+				    },
+				    oncancel:function(){
+				    },
+				    onclear:function(){
+				    }
+				});
+    		});
+    	</script>
+	</head>
+	<body>
+    	<h4>顶部搜索框样式，按回车触发搜索</h4>
+    	<div class="searchbar_wrap"></div>
+    	<div class="weui_cells_title">自定义搜索框</div>
+		<div class="weui_search_bar">
+			<input type="search" class="search-input" id='search' placeholder='关键字' style="box-sizing:content-box"/>
+			<button  class="weui_btn weui_btn_mini weui_btn_primary"><i class="icon icon-4"></i></button>    
+		</div>
+    
+	</body>
+</html>

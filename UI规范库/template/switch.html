@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>逻辑开关</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+		<link rel="stylesheet/less" type="text/css" href="../style/weui.less" />
+		<script type="text/javascript" src="../scripts/zepto.min.js"></script>
+    	<script type="text/javascript" src="../scripts/less.js" ></script>
+    	<script type="text/javascript" src="../scripts/template.js" ></script>
+    	<script type="text/javascript">
+    		$(function(){
+    			$('#ck').click(function(){
+					if($('#ck:checked').val()=='on'){
+						$("h2").html('打开');
+					}else{
+						$("h2").html('关闭');
+					}
+				});
+    		});
+    	</script>
+	</head>
+	<body>
+    	<div class="weui_cells weui_cells_form">
+	        <div class="weui_cell weui_cell_switch">
+	            <div class="weui_cell_hd weui_cell_primary">逻辑开关1</div>
+	            <div class="weui_cell_ft">
+	                <input class="weui_switch" type="checkbox" id='ck'/>
+	            </div>
+	        </div>
+	        <div class="weui_cell weui_cell_switch">
+	            <div class="weui_cell_hd weui_cell_primary">逻辑开关2</div>
+	            <div class="weui_cell_ft">
+	                <input class="weui_switch cdswitch" type="checkbox" id='ck'/>
+	            </div>
+	        </div>
+       </div>
+	    <h2>关闭</h2>
+	</body>
+</html>
